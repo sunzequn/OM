@@ -13,3 +13,11 @@ sim_mat = label_sim_matrix(dataset.source_class_labels, dataset.target_class_lab
 
 print("\nsim ------")
 test(sim_mat, 0.5, dataset.source_class_uris, dataset.target_class_uris, dataset.references)
+
+print("\n mcd ---- ")
+mcd = mcd_matrix(sim_mat)
+test(mcd, 0.3, dataset.source_class_uris, dataset.target_class_uris, dataset.references)
+
+print("\n mcd posi ---- ")
+mcd_posi = mcd_posi_matrix(sim_mat)
+test(mcd_posi, 0.5, dataset.source_class_uris, dataset.target_class_uris, dataset.references)

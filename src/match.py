@@ -40,6 +40,7 @@ def mwgm_level(sim_mat, threshold_list, source_class_uris, target_class_uris, re
         matching_pairs = mwgm(graph, source_uri_prefix)
         if len(matching_pairs) > 0:
             matching_pairs_dict[th] = matching_pairs
+            print(th)
             level_eva(matching_pairs_dict, source_class_uris, target_class_uris, references)
         else:
             return matching_pairs_dict
